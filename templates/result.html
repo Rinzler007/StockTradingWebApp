@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<title>Results - TelloTweet</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="../static/assets/css/main.css" />
+		<link rel="apple-touch-icon" sizes="180x180" href="../static/images/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="../static/images/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="../static/images/favicon-16x16.png">
+		<link rel="manifest" href="../static/images/site.webmanifest">
+		<style>
+			.bargraph {
+				width: 100%;
+				max-width: 200px;
+				height: auto;
+			}
+
+			.wordcloud {
+				width: 100%;
+				max-width: 200px;
+				height: auto;
+			}
+
+			.scatter {
+				width: 100%;
+				max-width: 200px;
+				height: auto;
+			}
+		</style>
+	</head>
+
+	<body class="landing">
+
+		<!-- Header -->
+		<header id="header" class="alt">
+			<h1><strong><a href="https://twitsentifinal.herokuapp.com">TelloTweet</a></strong></h1>
+			<nav id="nav">
+				<ul>
+					<li><a href="https://twitsentifinal.herokuapp.com">Home</a></li>
+					<li><a href="#four">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<a href="#menu" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+
+		<!-- Banner -->
+		<section id="banner">
+			<h2>TelloTweet</h2>
+			<p>Let's see what you've got
+			</p>
+		</section>
+		<!-- Main -->
+		<section id="main" class="wrapper">
+			<div class="container">
+
+				<header class="major special" style="text-align: center;">
+					<h2 style="text-align: center;">Results</h2>
+					<p style="text-align: center;">The following are our derivations for<span
+							style="color: black;">{{ stock }}<span></p>
+				</header>
+
+				<h2 style="text-align: center;">Sentiment Analysis</h2>
+				<p
+					style="color: black; text-align: center; position: relative; margin: 0 0 1.5em 0; text-transform: uppercase;">
+					{{ cost_val }}
+				</p>
+				<div class="bargraph" width="600" height="400">
+					{{ fig | safe }}
+				</div>
+			</div>
+		</section>
+		<section id="four" class="wrapper style3 special">
+			<div class="container">
+				<header class="major">
+					<h2>Contact</h2>
+					<p>To know more about this project</p>
+				</header>
+				<ul class="actions">
+					<li><a href="mailto:harshdasrox007@gmail.com" class="button special big">Get In Touch</a></li>
+				</ul>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer id="footer" style="font-weight: bold;">
+			<div class="container">
+				<ul class="icons">
+					<li><a href="https://github.com/Rinzler007" class="icon fa-github"></a></li>
+					<li><a href="https://www.facebook.com/harsh.das.58" class="icon fa-facebook"></a></li>
+					<li><a href="https://www.instagram.com/rinzler_0506/" class="icon fa-instagram"></a></li>
+				</ul>
+				<ul class="copyright">
+					<li>&copy; Harsh Das</li>
+				</ul>
+			</div>
+		</footer>
+
+		<!-- Scripts -->
+		<script src="../static/assets/js/jquery.min.js"></script>
+		<script src="../static/assets/js/skel.min.js"></script>
+		<script src="../static/assets/js/util.js"></script>
+		<script src="../static/assets/js/main.js"></script>
+
+	</body>
+
+</html>
