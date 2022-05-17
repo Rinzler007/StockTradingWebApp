@@ -36,14 +36,15 @@ def result():
     try:
         data = bt.feeds.PandasData(dataname=yf.download(stock, startdate, enddate))
     except Exception as e:
-        return render_template('index.html', error="The mentioned date is not valid"), 400
+        return render_template('index.html', error=e), 400
     cerebro = bt.Cerebro()
     cerebro.adddata(data)
     cerebro.addstrategy(BuyAndHold_Buy, "HODL")
     cerebro.run()
     finalportfoliovalue=cerebro.broker.getvalue()
     pt=cerebro.plot(iplot=False)
-    return render_template('result/html', stock=stock, cost_val=finalportfoliovalue, fig=pt)
+    html_str1=mpld3.fig_to_html(pt)
+    return render_template('result.html', stock=stock, cost_val=finalportfoliovalue, fig=html_str1)
 
 @app.errorhandler(500)
 def id_not_found(e):
